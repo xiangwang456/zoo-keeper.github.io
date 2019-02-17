@@ -78,7 +78,7 @@
         <span class="column is-narrow">
             
             
-            a minute read (About 213 words)
+            2 minutes read (About 227 words)
         </span>
         
     </div>
@@ -87,29 +87,40 @@
         <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
 <li><p>安装 homebrew</p>
 <ul>
-<li>shadowsocks + profixier 加速安装速度<br><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></li>
+<li>shadowsocks + profixier 加速安装速度<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="hljs-string">"<span class="hljs-variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li><p>homebrew 安装 git<br><code>brew install git</code>  </p>
+<li><p>homebrew 安装 git  </p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> brew install git</span><br><span class="line">```  </span><br><span class="line">*  设置变量  </span><br><span class="line">``` bash </span><br><span class="line">git config --global user.name <span class="hljs-string">'zz'</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>设置变量<br><code>git config --global user.name &#39;zz&#39;</code><br><code>git config --global user.email &#39;656453@qq.com&#39;</code></p>
-</li>
-<li><p>创建版本库<br><code>git init</code><br><code>ls -ah</code></p>
+</ul>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="hljs-string">'656453@qq.com'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建版本库  <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">```  </span><br><span class="line">``` bash </span><br><span class="line">ls -ah</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="导入项目"><a href="#导入项目" class="headerlink" title="导入项目"></a>导入项目</h2><ul>
-<li>创建ssh key<a href="*[Git教程-廖雪峰](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)*">^liaoxuefeng</a><br><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code></li>
-<li>将公钥 <em>Users/zz/.ssh/id_rsa.pub</em> 登记在<em><a href="https://github.com/settings/keys" target="_blank" rel="noopener">github</a></em>的设置里</li>
-<li>查看关联的远程库<br><code>git remote -v</code>   </li>
-<li>删除关联的远程库<br><code>git remote rm origin</code></li>
-<li>关联远程库<br><code>git remote add origin git@github.com:zoo-keeper/leetcode.git</code></li>
-<li>导入远程库<br><code>git pull origin master</code>  </li>
-</ul>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>###在文件管理器修改/删除文件 </p>
-<ul>
-<li>提交到当前工作区<br><code>git add .</code></li>
-<li>提交到本地仓库<br><code>git commit -m &quot;注释&quot;</code></li>
-<li>提交到远程库<br><code>git push origin master</code></li>
+<li><p>创建ssh key<a href="*[Git教程-廖雪峰](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)*">^liaoxuefeng</a></p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="hljs-string">"youremail@example.com"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将公钥 <em>Users/zz/.ssh/id_rsa.pub</em> 登记在<em><a href="https://github.com/settings/keys" target="_blank" rel="noopener">github</a></em>的设置里</p>
+</li>
+<li><p>查看关联的远程库  </p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">```   </span><br><span class="line">* 删除关联的远程库  </span><br><span class="line">``` bash </span><br><span class="line">git remote rm origin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关联远程库  </p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:zoo-keeper/leetcode.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入远程库  </p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## 测试 </span></span><br><span class="line"><span class="hljs-comment">###在文件管理器修改/删除文件 </span></span><br><span class="line">* 提交到当前工作区  </span><br><span class="line">``` bash </span><br><span class="line">git add .</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提交到本地仓库  </p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="hljs-string">"注释"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提交到远程库  </p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2>
     
